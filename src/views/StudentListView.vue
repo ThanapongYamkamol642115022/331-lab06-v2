@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import EventCard from '../components/EventCard.vue'
 import EventCard2 from '../components/EventCard2.vue'
-import StudentCard from '../components/StudentCard.vue'
 import type { EventItem } from '@/type'
 import { ref, type Ref } from 'vue'
 import StudentService from '@/services/StudentService'
