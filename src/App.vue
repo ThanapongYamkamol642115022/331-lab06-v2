@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { useMessageStore } from '@/stores/message';
-import { storeToRefs } from 'pinia';
+import { useMessageStore } from '@/stores/message'
+import { storeToRefs } from 'pinia'
 const store = useMessageStore()
 const { message } = storeToRefs(store)
-
 </script>
 
 <template>
@@ -14,9 +13,13 @@ const { message } = storeToRefs(store)
       <h4 class="text-lg">{{ message }}</h4>
     </div>
     <nav class="p-8">
-      <RouterLink :to="{ name: 'event-list' }" class="font-bold text-gray-700 hover:text-green-500">Home</RouterLink>
-      <RouterLink :to="{ name: 'about' }" class="font-bold text-gray-700 hover:text-green-500">About</RouterLink>
-      </nav>
+      <RouterLink :to="{ name: 'event-list' }" class="font-bold text-gray-700 hover:text-green-500"
+        >Home</RouterLink
+      >
+      <RouterLink :to="{ name: 'about' }" class="font-bold text-gray-700 hover:text-green-500"
+        >About</RouterLink
+      >
+    </nav>
   </header>
 
   <RouterView />
@@ -69,5 +72,4 @@ h4 {
 .animate-yellowfade {
   animation: yellowfade 3s ease-in-out;
 }
-
 </style>
